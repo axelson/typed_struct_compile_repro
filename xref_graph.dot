@@ -1,0 +1,42 @@
+digraph "xref graph" {
+  "lib/typed_demo.ex"
+  "lib/typed_demo/application.ex"
+  "lib/typed_demo/application.ex" -> "lib/typed_demo/repo.ex"
+  "lib/typed_demo/application.ex" -> "lib/typed_demo_web/endpoint.ex"
+  "lib/typed_demo_web/endpoint.ex" -> "lib/typed_demo_web/router.ex"
+  "lib/typed_demo_web/router.ex" -> "lib/typed_demo_web.ex" [label="(compile)"]
+  "lib/typed_demo_web/router.ex" -> "lib/typed_demo_web/controllers/page_controller.ex"
+  "lib/typed_demo_web/controllers/page_controller.ex" -> "lib/typed_demo_web.ex" [label="(compile)"]
+  "lib/typed_demo_web/controllers/page_controller.ex" -> "lib/typed_demo_web/gettext.ex" [label="(export)"]
+  "lib/typed_demo_web/router.ex" -> "lib/typed_demo_web/telemetry.ex"
+  "lib/typed_demo_web/router.ex" -> "lib/typed_demo_web/views/layout_view.ex"
+  "lib/typed_demo_web/views/layout_view.ex" -> "lib/typed_demo_web.ex" [label="(compile)"]
+  "lib/typed_demo_web/views/layout_view.ex" -> "lib/typed_demo_web/gettext.ex" [label="(export)"]
+  "lib/typed_demo_web/views/layout_view.ex" -> "lib/typed_demo_web/router.ex"
+  "lib/typed_demo_web/views/layout_view.ex" -> "lib/typed_demo_web/views/error_helpers.ex" [label="(export)"]
+  "lib/typed_demo_web/views/error_helpers.ex" -> "lib/typed_demo_web/gettext.ex"
+  "lib/typed_demo/application.ex" -> "lib/typed_demo_web/telemetry.ex"
+  "lib/typed_demo/company.ex"
+  "lib/typed_demo/country.ex"
+  "lib/typed_demo/mailer.ex"
+  "lib/typed_demo/person.ex"
+  "lib/typed_demo/person.ex" -> "lib/typed_demo/company.ex"
+  "lib/typed_demo/person.ex" -> "lib/typed_demo/country.ex" [label="(compile)"]
+  "lib/typed_demo/repo.ex"
+  "lib/typed_demo_web.ex"
+  "lib/typed_demo_web/controllers/page_controller.ex"
+  "lib/typed_demo_web/endpoint.ex"
+  "lib/typed_demo_web/gettext.ex"
+  "lib/typed_demo_web/router.ex"
+  "lib/typed_demo_web/telemetry.ex"
+  "lib/typed_demo_web/views/error_helpers.ex"
+  "lib/typed_demo_web/views/error_view.ex"
+  "lib/typed_demo_web/views/error_view.ex" -> "lib/typed_demo_web.ex" [label="(compile)"]
+  "lib/typed_demo_web/views/error_view.ex" -> "lib/typed_demo_web/gettext.ex" [label="(export)"]
+  "lib/typed_demo_web/views/error_view.ex" -> "lib/typed_demo_web/views/error_helpers.ex" [label="(export)"]
+  "lib/typed_demo_web/views/layout_view.ex"
+  "lib/typed_demo_web/views/page_view.ex"
+  "lib/typed_demo_web/views/page_view.ex" -> "lib/typed_demo_web.ex" [label="(compile)"]
+  "lib/typed_demo_web/views/page_view.ex" -> "lib/typed_demo_web/gettext.ex" [label="(compile)"]
+  "lib/typed_demo_web/views/page_view.ex" -> "lib/typed_demo_web/views/error_helpers.ex" [label="(export)"]
+}
